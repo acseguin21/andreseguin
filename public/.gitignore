@@ -1,0 +1,8 @@
+# Ignore files not needed to serve the site (used when _site is committed or deployed)
+.DS_Store
+Thumbs.db
+*.log
+*.map
+.cache
+README
+.git
