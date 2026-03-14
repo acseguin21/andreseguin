@@ -3,95 +3,497 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Andre Seguin, CISSP, CCNP. Security engineering, detection &amp; response, technical escalation. Calgary.">
-  <title>Andre Seguin — Security &amp; Detection</title>
-  <link rel="stylesheet" href="/andreseguin/css/site.css">
+  <meta name="description" content="Andre Seguin, CISSP, CCNP. Security infrastructure engineering, detection as code, multi-cloud. Calgary.">
+  <title>Andre Seguin — Security Infrastructure</title>
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <div class="cyber-bg" aria-hidden="true"></div>
-  <nav class="main-nav">
+
+  <!-- Animated background layers -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Scrolling data streams -->
+  <div class="streams" aria-hidden="true">
+
+    <div class="stream stream-1">
+      <div class="stream-inner">
+7F 45 4C 46
+DE AD BE EF
+02 01 01 00
+CA FE BA BE
+4E 6F 70 65
+00 3E 00 01
+FF FF FF FF
+0A 00 00 01
+C0 A8 01 FE
+17 00 00 00
+7F 00 00 01
+FF 02 00 00
+08 00 45 00
+A3 F2 B1 C9
+D4 E8 F7 02
+3B 5A 1C 9F
+72 AA 04 DE
+7F 45 4C 46
+DE AD BE EF
+02 01 01 00
+CA FE BA BE
+4E 6F 70 65
+00 3E 00 01
+FF FF FF FF
+0A 00 00 01
+C0 A8 01 FE
+17 00 00 00
+7F 00 00 01
+FF 02 00 00
+08 00 45 00
+A3 F2 B1 C9
+D4 E8 F7 02
+3B 5A 1C 9F
+72 AA 04 DE
+      </div>
+    </div>
+
+    <div class="stream stream-2">
+      <div class="stream-inner">
+10110011
+01001010
+11001101
+00110101
+10011010
+01101100
+11100010
+01010111
+10001111
+00111010
+11010001
+01100110
+10101011
+00010100
+11111000
+01001001
+10110011
+01001010
+11001101
+00110101
+10011010
+01101100
+11100010
+01010111
+10001111
+00111010
+11010001
+01100110
+10101011
+00010100
+11111000
+01001001
+      </div>
+    </div>
+
+    <div class="stream stream-3">
+      <div class="stream-inner">
+10.0.0.1:443
+172.16.0.0/12
+192.168.1.254
+0.0.0.0/0
+SYN &gt; :8443
+ACK &lt; :443
+RST :22
+10.0.1.5:80
+SYN-ACK
+[ALLOW]
+[DROP]
+[BLOCK]
+10.0.0.1:443
+172.16.0.0/12
+192.168.1.254
+0.0.0.0/0
+SYN &gt; :8443
+ACK &lt; :443
+RST :22
+10.0.1.5:80
+SYN-ACK
+[ALLOW]
+[DROP]
+[BLOCK]
+      </div>
+    </div>
+
+    <div class="stream stream-4">
+      <div class="stream-inner">
+a3f2b1c9d4e8
+f702c6a91b3d
+8e5f4a2d7c01
+3b9e6f1a0d84
+c2718b3e5f9a
+4d0a72b1c638
+9f3e1c8b7a2d
+5c4b0e9d2f71
+a8f3c6d1b4e0
+2e7a9c5f3b18
+d1042b7e8a3c
+6f9c2d4b1e0a
+a3f2b1c9d4e8
+f702c6a91b3d
+8e5f4a2d7c01
+3b9e6f1a0d84
+c2718b3e5f9a
+4d0a72b1c638
+9f3e1c8b7a2d
+5c4b0e9d2f71
+a8f3c6d1b4e0
+2e7a9c5f3b18
+d1042b7e8a3c
+6f9c2d4b1e0a
+      </div>
+    </div>
+
+    <div class="stream stream-5">
+      <div class="stream-inner">
+AES-256-GCM
+HMAC-SHA512
+RSA-4096
+ECDSA P-384
+TLS 1.3
+X.509 v3
+PKCS#11
+SHA-3/256
+ChaCha20
+Poly1305
+scrypt N=17
+bcrypt $2b
+AES-256-GCM
+HMAC-SHA512
+RSA-4096
+ECDSA P-384
+TLS 1.3
+X.509 v3
+PKCS#11
+SHA-3/256
+ChaCha20
+Poly1305
+scrypt N=17
+bcrypt $2b
+      </div>
+    </div>
+
+    <div class="stream stream-6">
+      <div class="stream-inner">
+01001000
+01100101
+01101100
+01101100
+01101111
+00100000
+01010111
+01101111
+01110010
+01101100
+01100100
+00100001
+01001000
+01100101
+01101100
+01101100
+01101111
+00100000
+01010111
+01101111
+01110010
+01101100
+01100100
+00100001
+      </div>
+    </div>
+
+    <div class="stream stream-7">
+      <div class="stream-inner">
+0xDEADBEEF
+0xCAFEBABE
+0xBAADF00D
+0x8BADF00D
+0xC0FFEE00
+0xFACEFEED
+0x0D15EA5E
+0xB16B00B5
+0xDEADC0DE
+0xABADBABE
+0xDEADBEEF
+0xCAFEBABE
+0xBAADF00D
+0x8BADF00D
+0xC0FFEE00
+0xFACEFEED
+0x0D15EA5E
+0xB16B00B5
+0xDEADC0DE
+0xABADBABE
+      </div>
+    </div>
+
+    <div class="stream stream-8">
+      <div class="stream-inner">
+CVE-2024-1234
+CVSS: 9.8
+RCE via OOB
+heap spray
+ret2libc
+ROP chain
+NX bypass
+ASLR leak
+CVE-2023-9981
+CVSS: 7.5
+SQLi blind
+XXE inject
+SSRF chain
+priv-esc
+CVE-2024-1234
+CVSS: 9.8
+RCE via OOB
+heap spray
+ret2libc
+ROP chain
+NX bypass
+ASLR leak
+CVE-2023-9981
+CVSS: 7.5
+SQLi blind
+XXE inject
+SSRF chain
+priv-esc
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Horizontal scan beam -->
+  <div class="scan-beam" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Primary navigation">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
-  <main class="page">
-    <section id="hero" class="panel hero-panel">
-  <div class="panel-inner">
-    <h1 class="name">Andre Seguin</h1>
-    <p class="creds">Calgary, AB</p>
-    <p class="tagline">Signal in the noise. When it breaks, I help fix it.</p>
-    <div class="cert-badges">
-      <span>CISSP</span>
-      <span>CCNP</span>
-      <span>LFCSA</span>
-      <span>Security+</span>
-      <span>PCCSA</span>
-    </div>
-    <div class="hero-scroll-hint" aria-hidden="true">scroll</div>
-  </div>
-</section>
-<section id="about" class="panel about-panel">
-  <div class="panel-inner">
-    <h2>About</h2>
-    <div class="stat-row">
-      <div class="stat-box"><span class="stat-num">10+</span><span class="stat-label">Years</span></div>
-      <div class="stat-box"><span class="stat-num">D&amp;R</span><span class="stat-label">Find &amp; fix</span></div>
-      <div class="stat-box"><span class="stat-num">24/7</span><span class="stat-label">Global coverage</span></div>
-      <div class="stat-box"><span class="stat-num">IR</span><span class="stat-label">Incident response</span></div>
-    </div>
-    <p class="about-one-liner">Security and technical escalation lead. Commerce degree in the rearview; I live in the stack—telemetry, pipelines, automation—and in the room: triage, root cause, and briefings that don’t put people to sleep.</p>
-  </div>
-</section>
-<section id="skills" class="panel skills-panel">
-  <div class="panel-inner">
-    <h2>Stack &amp; Domain</h2>
-    <div class="skill-tags">
-      <span>Microsoft Defender</span>
-      <span>Azure</span>
-      <span>Entra ID</span>
-      <span>KQL</span>
-      <span>Databricks</span>
-      <span>Splunk</span>
-      <span>Datadog</span>
-      <span>Python</span>
-      <span>PowerShell</span>
-      <span>GitHub</span>
-      <span>GitLab</span>
-      <span>Cursor</span>
-      <span>Signal hunting</span>
-      <span>Runbooks</span>
-      <span>Enrichment</span>
-    </div>
-  </div>
-</section>
-<section id="experience" class="panel experience-panel">
-  <div class="panel-inner">
-    <h2>At a Glance</h2>
-    <ul class="highlight-list">
-      <li>Ownership when it matters: business-critical security and technical issues, end to end.</li>
-      <li>Analytics and data platform—ingestion, normalization, enrichment across endpoint, identity, cloud, and network.</li>
-      <li>Workflows that run when humans shouldn’t have to; triage, containment, resolution.</li>
-      <li>Internal tooling and apps (Cursor, AI-assisted dev) so the team can scale without the toil.</li>
-      <li>Translating for the room: technical and non-technical briefings, leadership and legal in the loop.</li>
-    </ul>
-    <p class="industries-label">Industries</p>
-    <div class="industry-pills">
-      <span>Technology &amp; High-Growth</span>
-      <span>Critical Infrastructure</span>
-      <span>Mining &amp; Resources</span>
-      <span>Transportation</span>
-    </div>
-  </div>
-</section>
-<section id="contact" class="panel contact-panel">
-  <div class="panel-inner">
-    <h2>Contact</h2>
-    <p class="contact-cta">Drop a line</p>
-    <p><a href="mailto:acseguin@protonmail.com">acseguin@protonmail.com</a></p>
-  </div>
-</section>
+
+  <main>
+
+    <!-- ── HERO ─────────────────────────────────────────── -->
+    <section id="hero">
+      <div class="inner">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Cybersecurity Professional · Calgary, AB
+        </div>
+
+        <h1 class="hero-name" data-text="Andre Seguin">Andre Seguin</h1>
+
+        <p class="hero-sub">
+          <em>Detection as code.</em> AI-accelerated. Built to scale.
+        </p>
+
+        <div class="cert-row" aria-label="Certifications">
+          <span class="cert">CISSP</span>
+          <span class="cert">CCNP</span>
+          <span class="cert">LFCSA</span>
+          <span class="cert">Security+</span>
+          <span class="cert">PCCSA</span>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">scroll</div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ─────────────────────────────────────────── -->
+    <section id="about">
+      <div class="inner">
+        <p class="section-eyebrow">Profile</p>
+        <h2 class="section-title">Built security from&nbsp;scratch.<br>Scaled it globally.</h2>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-value">10+</span>
+            <span class="stat-label">Years in field</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">0→1</span>
+            <span class="stat-label">Startup to scale</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">AI</span>
+            <span class="stat-label">Native workflow</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">D&amp;R</span>
+            <span class="stat-label">Detection &amp; response</span>
+          </div>
+        </div>
+
+        <p class="about-bio">
+          I build security infrastructure from scratch and scale it — detection pipelines, data lakes, IaC-driven controls, and the tooling that ties it all together.
+          My background starts at the network layer (PKI, AAA, zero trust) and runs all the way up through cloud, container, and identity — rare depth that shows up in architecture decisions and incident response.
+          I write <strong>production-quality code</strong>, ship with AI-assisted tooling (<strong>Claude Code, GitHub Copilot, Cursor</strong>), and operate at the speed engineers expect from a peer, not an audit function.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ─────────────────────────────────────────── -->
+    <section id="skills">
+      <div class="inner">
+        <p class="section-eyebrow">Stack &amp; Domain</p>
+        <h2 class="section-title">What's in the toolkit.</h2>
+
+        <div class="skill-group-label">AI &amp; Developer Tooling</div>
+        <div class="skill-tags" role="list">
+          <span class="skill-tag skill-tag--ai" role="listitem">Claude Code</span>
+          <span class="skill-tag skill-tag--ai" role="listitem">GitHub Copilot</span>
+          <span class="skill-tag skill-tag--ai" role="listitem">Cursor</span>
+          <span class="skill-tag" role="listitem">Python</span>
+          <span class="skill-tag" role="listitem">Bash</span>
+          <span class="skill-tag" role="listitem">PowerShell</span>
+          <span class="skill-tag" role="listitem">REST APIs</span>
+          <span class="skill-tag" role="listitem">SOAR</span>
+        </div>
+
+        <div class="skill-group-label">Cloud &amp; Infrastructure</div>
+        <div class="skill-tags" role="list">
+          <span class="skill-tag" role="listitem">AWS</span>
+          <span class="skill-tag" role="listitem">Azure</span>
+          <span class="skill-tag" role="listitem">GCP</span>
+          <span class="skill-tag" role="listitem">Terraform</span>
+          <span class="skill-tag" role="listitem">Kubernetes</span>
+          <span class="skill-tag" role="listitem">Docker</span>
+          <span class="skill-tag" role="listitem">GitLab CI/CD</span>
+          <span class="skill-tag" role="listitem">GitHub Actions</span>
+          <span class="skill-tag" role="listitem">Ansible</span>
+        </div>
+
+        <div class="skill-group-label">Security &amp; Detection</div>
+        <div class="skill-tags" role="list">
+          <span class="skill-tag" role="listitem">Detection as Code</span>
+          <span class="skill-tag" role="listitem">Databricks</span>
+          <span class="skill-tag" role="listitem">KQL</span>
+          <span class="skill-tag" role="listitem">Splunk</span>
+          <span class="skill-tag" role="listitem">Datadog</span>
+          <span class="skill-tag" role="listitem">Microsoft Defender</span>
+          <span class="skill-tag" role="listitem">Entra ID</span>
+          <span class="skill-tag" role="listitem">Threat Modeling</span>
+          <span class="skill-tag" role="listitem">Threat Hunting</span>
+          <span class="skill-tag" role="listitem">Incident Response</span>
+          <span class="skill-tag" role="listitem">Zero Trust</span>
+          <span class="skill-tag" role="listitem">PKI / TLS</span>
+          <span class="skill-tag" role="listitem">SIEM / XDR</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ─────────────────────────────────────── -->
+    <section id="experience">
+      <div class="inner">
+        <p class="section-eyebrow">Experience</p>
+        <h2 class="section-title">What I've built<br>and where.</h2>
+
+        <div class="exp-cards">
+
+          <div class="exp-card">
+            <div class="exp-num">01</div>
+            <div class="exp-text">
+              <strong>Detection-as-Code Pipeline</strong>
+              Detections versioned in Git, CI-tested, and auto-deployed across cloud, identity, endpoint, and network telemetry. Zero manual deploy steps.
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-num">02</div>
+            <div class="exp-text">
+              <strong>Security Data Lake — Databricks at Scale</strong>
+              Architected and operates a high-volume telemetry pipeline: ingestion, normalization, and enrichment from AWS, Azure, GCP, endpoints, and network into Databricks for threat hunting and long-term analytics.
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-num">03</div>
+            <div class="exp-text">
+              <strong>AI-Accelerated Engineering</strong>
+              Claude Code, GitHub Copilot, and Cursor are daily dev tools — shipping automation, detections, and tooling at the pace engineering teams expect. AI isn't a curiosity; it's in the workflow.
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-num">04</div>
+            <div class="exp-text">
+              <strong>IaC &amp; Policy-as-Code</strong>
+              Terraform-driven security control deployment through GitLab and GitHub CI/CD. Consistent policy enforcement across AWS, Azure, and GCP — no snowflakes.
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-num">05</div>
+            <div class="exp-text">
+              <strong>Threat Modeling &amp; Secure Architecture</strong>
+              Security design reviews embedded in the engineering lifecycle. Risk-based remediation with engineering partners — not handed down from above.
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-num">06</div>
+            <div class="exp-text">
+              <strong>High-Severity Incident Response</strong>
+              End-to-end IR ownership across distributed cloud environments — scoping, containment, remediation, and executive briefing. Keeps leadership and legal in the loop without putting the room to sleep.
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-num">07</div>
+            <div class="exp-text">
+              <strong>0→1 in High-Growth Tech</strong>
+              Built security infrastructure where none existed, inside fast-moving startup environments — then scaled it as the org grew. Comfortable with ambiguity, greenfield problems, and moving at product speed.
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-num">08</div>
+            <div class="exp-text">
+              <strong>Network-Layer Foundations</strong>
+              Enterprise AAA, NAC, RADIUS/TACACS, PKI, and TLS at critical infrastructure scale. Network internals fluency is rare in cloud-first security roles — it shows up in zero-trust architecture and incident scoping.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="industries">
+          <p class="industries-heading">Environments</p>
+          <div class="pills">
+            <span class="pill">High-Growth Tech</span>
+            <span class="pill">Cloud-Native Startups</span>
+            <span class="pill">Critical Infrastructure</span>
+            <span class="pill">Distributed &amp; Remote-First</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ───────────────────────────────────────── -->
+    <section id="contact">
+      <div class="contact-inner">
+        <p class="section-eyebrow" style="justify-content:center">Contact</p>
+        <h2 class="contact-headline">Have a hard problem?<br>Let's talk.</h2>
+        <p class="contact-sub">
+          Calgary, AB · Available remotely.
+        </p>
+        <a class="contact-email" href="mailto:acseguin@protonmail.com">
+          acseguin@protonmail.com
+        </a>
+        <div class="social-row">
+          <a class="social-link" href="https://github.com/acseguin21" target="_blank" rel="noopener">GitHub</a>
+          <a class="social-link" href="https://linkedin.com/in/andr%C3%A9-seguin-13a34564" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 </body>
