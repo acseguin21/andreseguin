@@ -179,7 +179,6 @@ hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
 /* ── Blocks ─────────────────────────────────────────── */
 
 section { margin-top: 2.75rem; }
-section:first-of-type { margin-top: 0; }
 
 section h2 { font-size: 1.5rem; font-weight: 650; margin-bottom: 0.75rem; }
 
@@ -190,7 +189,8 @@ p { margin: 0 0 1rem; }
   background: var(--callout); border-radius: var(--radius);
   padding: 1rem 1.1rem; margin: 0 0 1.25rem;
 }
-.callout p:last-child { margin-bottom: 0; }
+.callout p { margin: 0; }
+.callout div p + p { margin-top: 0.75rem; }
 .callout-icon { font-size: 1.2rem; line-height: 1.4; }
 
 .callout-grid {
@@ -236,6 +236,23 @@ th, td { border: 1px solid var(--border); padding: 0.55rem 0.75rem; text-align: 
 th { width: 10rem; font-weight: 550; color: var(--text-soft); background: var(--callout); }
 
 @media (max-width: 560px) { th { width: 7rem; } }
+
+/* Focus list */
+
+.focus { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.25rem 1.5rem; margin: 0; }
+.focus > div { padding: 0.55rem 0; border-bottom: 1px solid var(--border); min-width: 0; }
+.focus dt { font-weight: 600; }
+.focus dd { margin: 0.1rem 0 0; color: var(--text-soft); font-size: 0.9375rem; }
+
+@media (max-width: 560px) { .focus { grid-template-columns: 1fr; } }
+
+/* Toolkit tags */
+
+.tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tags li {
+  background: var(--callout); border-radius: 4px;
+  padding: 0.15rem 0.55rem; font-size: 0.9rem;
+}
 
 .employers { list-style: none; margin: 0; padding: 0; }
 .employers li {

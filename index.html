@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="Security engineer who ships software. Cloud, AI, and fintech security. CISSP · CCNP · Calgary, AB.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="apple-touch-icon.svg">
-  <link rel="stylesheet" href="css/site.css?v=5">
+  <link rel="stylesheet" href="css/site.css?v=6">
   <script src="js/theme.js?v=1"></script>
 </head>
 <body>
@@ -30,9 +30,9 @@
       <a class="wordmark" href="#top">Andre Seguin</a>
       <div class="header-right">
         <nav aria-label="Primary">
-          <a href="#now">now</a>
-          <a href="#approach">approach</a>
-          <a href="#background">background</a>
+          <a href="#focus">focus</a>
+          <a href="#experience">experience</a>
+          <a href="#toolkit">toolkit</a>
           <a href="#contact">contact</a>
         </nav>
         <button class="theme-toggle" type="button" aria-label="switch to light mode" hidden>
@@ -51,40 +51,40 @@
     <div id="top" class="page-head">
       <img class="page-icon" src="assets/headshot.jpg" width="800" height="800" alt="Photo of Andre Seguin">
       <h1>Andre Seguin</h1>
-      <p class="page-sub">Security engineer who ships software. Currently protecting people's financial data at a consumer fintech.</p>
+      <p class="page-sub">security engineer who ships software. fintech, cloud &amp; AI.</p>
 
       <dl class="props">
         <div class="prop">
           <dt>currently</dt>
-          <dd>personal finance fintech</dd>
+          <dd>security @ fintech</dd>
         </div>
         <div class="prop">
           <dt>focus</dt>
           <dd class="chips">
+            <span class="chip chip--green">agentic AI</span>
             <span class="chip chip--red">security</span>
             <span class="chip chip--blue">software</span>
             <span class="chip chip--purple">cloud</span>
-            <span class="chip chip--green">AI</span>
             <span class="chip chip--orange">fintech</span>
           </dd>
         </div>
         <div class="prop">
           <dt>experience</dt>
-          <dd>10+ years</dd>
+          <dd>10+ yrs</dd>
         </div>
         <div class="prop">
           <dt>location</dt>
-          <dd>Calgary, AB · remote</dd>
+          <dd>calgary, AB · remote</dd>
         </div>
         <div class="prop">
-          <dt>certifications</dt>
+          <dt>certs</dt>
           <dd>CISSP · CCNP · LFCS</dd>
         </div>
         <div class="prop">
           <dt>links</dt>
           <dd class="links">
-            <a href="https://linkedin.com/in/andr%C3%A9-seguin-13a34564" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/acseguin21" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/andr%C3%A9-seguin-13a34564" target="_blank" rel="noopener">linkedin</a>
+            <a href="https://github.com/acseguin21" target="_blank" rel="noopener">github</a>
             <a href="mailto:andreseguin@hotmail.com">email</a>
           </dd>
         </div>
@@ -93,175 +93,73 @@
 
     <hr>
 
-    <!-- Intro -->
-    <section aria-label="Introduction">
-      <aside class="callout">
-        <span class="callout-icon" aria-hidden="true">💡</span>
-        <div>
-          <p><strong>In fintech, security is a fiduciary duty.</strong> People connect their bank accounts, investments, and
-          spending history so they can make better decisions with their money. That only works if they can trust the platform
-          with it. I build the systems that earn and keep that trust.</p>
-        </div>
-      </aside>
+    <aside class="callout">
+      <span class="callout-icon" aria-hidden="true">💡</span>
+      <p><strong>in fintech, security is a fiduciary duty.</strong> people trust us with their whole financial picture. protecting it is the job.</p>
+    </aside>
 
-      <p>
-        I'm a security engineer with more than ten years of experience, and I do most of my work in code. I build cloud guardrails, detection
-        pipelines, and internal tooling the same way product teams build features: version-controlled, tested, reviewed, and
-        shipped often. My background runs from enterprise networking and PKI up through cloud, containers, identity, and now AI,
-        which helps me see how the whole stack fits together.
-      </p>
-    </section>
-
-    <!-- Now -->
-    <section id="now">
-      <h2>what I do now</h2>
-      <p>
-        I work at a personal finance platform that brings together people's accounts, budgets, and investments in one place.
-        My work covers six areas:
-      </p>
-
-      <details>
-        <summary>agentic SOC &amp; detection</summary>
-        <ul>
-          <li>An agentic SOC where AI agents triage alerts, gather context, and draft findings, so people spend their time on decisions.</li>
-          <li>Security telemetry in Datadog and Sumo Logic, with detections written, tested, and deployed as code.</li>
-          <li>24/7 coverage with Expel as our MDR partner, and incident response from first alert to lasting fix.</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>AI, agents &amp; MCP</summary>
-        <ul>
-          <li>Governing how AI agents reach company tools and data over MCP, using MintMCP for access control and audit.</li>
-          <li>Building MCP servers, Slack bots, and agent workflows with Claude Code and Devin; prototyping internal tools on Replit.</li>
-          <li>Threat modeling AI features for prompt injection, data leakage, and over-permissioned agents.</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>cloud &amp; edge security</summary>
-        <ul>
-          <li>Cloud posture and runtime risk in Wiz, with GuardDuty threat detection across AWS.</li>
-          <li>Edge protection with Cloudflare: WAF, bot management, and zero trust access.</li>
-          <li>Security guardrails defined in Terraform and enforced in CI, so the secure setup is also the default one.</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>identity &amp; endpoint</summary>
-        <ul>
-          <li>Okta and Google Workspace as the identity foundation, with least-privilege access for people and services.</li>
-          <li>CrowdStrike on every endpoint, and Macs managed with Kandji and Jamf.</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>application security &amp; financial data</summary>
-        <ul>
-          <li>Semgrep and GitHub Advanced Security on every pull request, covering code, secrets, and dependencies.</li>
-          <li>Securing the account-aggregation integrations (Plaid, MX, Finicity) that connect people's financial institutions.</li>
-          <li>Protecting customer financial data through encryption, data minimization, and tight access controls.</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>vendor risk &amp; automation</summary>
-        <ul>
-          <li>Third-party risk reviews in VISO TRUST, built into purchasing through Zip, so security review happens before a contract is signed.</li>
-          <li>Slack bots and automations that connect security work to Linear and Notion, so requests and evidence don't get lost.</li>
-        </ul>
-      </details>
+    <!-- Focus -->
+    <section id="focus">
+      <h2>what I work on</h2>
+      <dl class="focus">
+        <div><dt>agentic SOC</dt><dd>AI agents on triage, humans on decisions</dd></div>
+        <div><dt>MCP &amp; agent security</dt><dd>guardrails for what agents can touch</dd></div>
+        <div><dt>detection-as-code</dt><dd>git, CI, ship it</dd></div>
+        <div><dt>cloud &amp; edge</dt><dd>guardrails as code, zero trust by default</dd></div>
+        <div><dt>appsec</dt><dd>scanning on every PR, secrets out of code</dd></div>
+        <div><dt>open banking security</dt><dd>locking down account-aggregation data flows</dd></div>
+        <div><dt>AI-native tooling</dt><dd>bots, agents &amp; internal apps, shipped in days</dd></div>
+        <div><dt>incident response</dt><dd>first alert to root cause to lasting fix</dd></div>
+      </dl>
     </section>
 
     <!-- Approach -->
     <section id="approach">
       <h2>how I work</h2>
       <div class="callout-grid">
-        <aside class="callout">
-          <span class="callout-icon" aria-hidden="true">🧱</span>
-          <div><strong>Security is software.</strong> Controls, detections, and policies live in Git, run through CI, and get code review like everything else.</div>
-        </aside>
-        <aside class="callout">
-          <span class="callout-icon" aria-hidden="true">🛣️</span>
-          <div><strong>Paved roads, not gates.</strong> The best control is a secure default that engineers would pick anyway, because it's also the easiest option.</div>
-        </aside>
-        <aside class="callout">
-          <span class="callout-icon" aria-hidden="true">🤝</span>
-          <div><strong>Act in the customer's interest.</strong> Collect less, protect what we keep, and be ready to explain every access decision.</div>
-        </aside>
-        <aside class="callout">
-          <span class="callout-icon" aria-hidden="true">⚡</span>
-          <div><strong>AI as leverage.</strong> I use AI tools every day to ship faster, and I hold AI features to the same security standard as any other code.</div>
-        </aside>
+        <aside class="callout"><span class="callout-icon" aria-hidden="true">🧱</span><p><strong>security is software.</strong> in git, through CI, code reviewed.</p></aside>
+        <aside class="callout"><span class="callout-icon" aria-hidden="true">🛣️</span><p><strong>paved roads, not gates.</strong> make the secure way the easy way.</p></aside>
+        <aside class="callout"><span class="callout-icon" aria-hidden="true">🤝</span><p><strong>customer first.</strong> collect less, protect what we keep.</p></aside>
+        <aside class="callout"><span class="callout-icon" aria-hidden="true">⚡</span><p><strong>AI as leverage.</strong> agents do the toil, people do the thinking.</p></aside>
       </div>
     </section>
 
-    <!-- Background -->
-    <section id="background">
-      <h2>before that</h2>
-
-      <details>
-        <summary>building security from zero at high-growth startups</summary>
-        <p>I've set up security functions where none existed: first hires, first controls, and first incident playbooks. Then I scaled the tooling and processes as the companies grew.</p>
-      </details>
-
-      <details>
-        <summary>detection as code &amp; a security data lake</summary>
-        <p>I designed and ran a high-volume security data lake covering cloud, identity, endpoint, and network telemetry. Detections were versioned in Git, tested in CI, and deployed automatically.</p>
-      </details>
-
-      <details>
-        <summary>incident response in distributed cloud environments</summary>
-        <p>I owned high-severity incidents end to end, from scoping and containment through remediation and clear briefings for leadership and legal.</p>
-      </details>
-
-      <details>
-        <summary>network &amp; critical infrastructure foundations</summary>
-        <p>I started in enterprise networking at critical-infrastructure scale, working on PKI, TLS, and secure network design. That foundation still shapes how I approach zero trust and incident scoping.</p>
-      </details>
-    </section>
-
-    <!-- Employers -->
-    <section id="employers">
+    <!-- Experience -->
+    <section id="experience">
       <h2>where I've worked</h2>
       <ul class="employers">
-        <li>Monarch Money</li>
-        <li>Rivian Automotive</li>
-        <li>Teck Resources</li>
-        <li>CPKC Railways</li>
-        <li>Capital Power</li>
+        <li>monarch money</li>
+        <li>rivian</li>
+        <li>teck</li>
+        <li>CPKC</li>
+        <li>capital power</li>
       </ul>
     </section>
 
-    <!-- Skills -->
-    <section id="skills">
+    <!-- Toolkit -->
+    <section id="toolkit">
       <h2>toolkit</h2>
-      <div class="table-wrap">
-        <table>
-          <tbody>
-            <tr><th scope="row">AI &amp; agents</th><td>Claude Code, Devin, MintMCP, MCP servers, LLM APIs, Replit</td></tr>
-            <tr><th scope="row">detection &amp; response</th><td>agentic SOC, Datadog, Sumo Logic, Expel, CrowdStrike</td></tr>
-            <tr><th scope="row">cloud &amp; edge</th><td>AWS, GCP, Azure, Cloudflare, Wiz, GuardDuty, Terraform, Kubernetes, Docker</td></tr>
-            <tr><th scope="row">identity &amp; devices</th><td>Okta, Google Workspace, Kandji, Jamf, zero trust, PKI / TLS</td></tr>
-            <tr><th scope="row">appsec &amp; vendor risk</th><td>Semgrep, GitHub Advanced Security, VISO TRUST, Zip</td></tr>
-            <tr><th scope="row">fintech</th><td>Plaid, MX, Finicity</td></tr>
-            <tr><th scope="row">software &amp; automation</th><td>Python, Bash, REST APIs, GitHub Actions, GitLab CI/CD, Slack bots, Linear, Notion</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <ul class="tags">
+        <li>claude code</li><li>devin</li><li>MintMCP</li><li>MCP servers</li><li>LLM APIs</li><li>replit</li>
+        <li>slack bots</li><li>datadog</li><li>sumo logic</li><li>expel</li><li>crowdstrike</li><li>wiz</li>
+        <li>guardduty</li><li>cloudflare</li><li>AWS</li><li>GCP</li><li>azure</li><li>terraform</li>
+        <li>kubernetes</li><li>docker</li><li>okta</li><li>google workspace</li><li>iru</li><li>jamf</li>
+        <li>semgrep</li><li>github advanced security</li><li>viso trust</li><li>zip</li><li>plaid</li><li>MX</li>
+        <li>finicity</li><li>python</li><li>bash</li><li>github actions</li><li>gitlab CI</li><li>linear</li><li>notion</li>
+      </ul>
     </section>
 
     <!-- Contact -->
     <section id="contact">
-      <h2>get in touch</h2>
+      <h2>say hi</h2>
       <aside class="callout">
         <span class="callout-icon" aria-hidden="true">👋</span>
         <div>
-          <p>I'm always happy to talk about fintech security, AI, or detection engineering.</p>
+          <p>always down to talk fintech security, agentic AI, or detection engineering.</p>
           <p class="contact-links">
             <a href="mailto:andreseguin@hotmail.com">andreseguin@hotmail.com</a>
-            <a href="https://linkedin.com/in/andr%C3%A9-seguin-13a34564" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/acseguin21" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/andr%C3%A9-seguin-13a34564" target="_blank" rel="noopener">linkedin</a>
+            <a href="https://github.com/acseguin21" target="_blank" rel="noopener">github</a>
           </p>
         </div>
       </aside>
@@ -269,7 +167,7 @@
 
   </main>
 
-  <footer class="site-footer">© 2026 Andre Seguin</footer>
+  <footer class="site-footer">© 2026 andre seguin</footer>
 
 </body>
 </html>
