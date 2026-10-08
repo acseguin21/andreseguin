@@ -6,6 +6,19 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 :root {
+  --bg:        #111315;
+  --surface:   #181b1f;
+  --border:    #2a2e34;
+  --text:      #e8eaed;
+  --text-soft: #a1a7b0;
+  --accent:    #7fa9f0;
+  --accent-fg: #0d1117;
+  --tag-bg:    #22262c;
+  --radius:    10px;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
   --bg:        #fbfbfa;
   --surface:   #ffffff;
   --border:    #e4e4e0;
@@ -14,20 +27,7 @@
   --accent:    #1f5fbf;
   --accent-fg: #ffffff;
   --tag-bg:    #f0f1f3;
-  --radius:    10px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:        #111315;
-    --surface:   #181b1f;
-    --border:    #2a2e34;
-    --text:      #e8eaed;
-    --text-soft: #a1a7b0;
-    --accent:    #7fa9f0;
-    --accent-fg: #0d1117;
-    --tag-bg:    #22262c;
-  }
+  color-scheme: light;
 }
 
 html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
@@ -84,11 +84,26 @@ h1, h2, h3 { line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
 }
 .site-header nav a:hover { color: var(--text); }
 
+.header-right { display: flex; align-items: center; gap: 1.25rem; }
+
+.theme-toggle {
+  display: grid; place-items: center;
+  width: 2.25rem; height: 2.25rem; padding: 0;
+  border: 1px solid var(--border); border-radius: 50%;
+  background: var(--surface); color: var(--text-soft); cursor: pointer;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--text-soft); }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle svg { width: 1.05rem; height: 1.05rem; }
+.icon-moon { display: none; }
+:root[data-theme="light"] .icon-sun  { display: none; }
+:root[data-theme="light"] .icon-moon { display: block; }
+
 @media (max-width: 540px) {
   .site-header nav { gap: 1rem; }
   .site-header nav a { font-size: 0.875rem; }
   .wordmark { display: none; }
-  .header-row { justify-content: center; }
+  .header-row { justify-content: flex-end; }
 }
 
 /* ── Sections ───────────────────────────────────────── */
@@ -182,7 +197,7 @@ section p  { margin: 0 0 1rem; }
 }
 .skills-grid h3 {
   font-size: 0.85rem; font-weight: 600; color: var(--text-soft);
-  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem;
+  letter-spacing: 0.01em; margin-bottom: 0.75rem;
 }
 
 .tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
