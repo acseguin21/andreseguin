@@ -78,7 +78,7 @@
         </div>
         <div class="prop">
           <dt>certifications</dt>
-          <dd>CISSP · CCNP · LFCS · Security+ · PCCSA</dd>
+          <dd>CISSP · CCNP · LFCS</dd>
         </div>
         <div class="prop">
           <dt>links</dt>
@@ -117,42 +117,58 @@
       <h2>what I do now</h2>
       <p>
         I work at a personal finance platform that brings together people's accounts, budgets, and investments in one place.
-        My work covers four areas:
+        My work covers six areas:
       </p>
 
       <details>
-        <summary>cloud &amp; infrastructure security</summary>
+        <summary>agentic SOC &amp; detection</summary>
         <ul>
+          <li>An agentic SOC where AI agents triage alerts, gather context, and draft findings, so people spend their time on decisions.</li>
+          <li>Security telemetry in Datadog and Sumo Logic, with detections written, tested, and deployed as code.</li>
+          <li>24/7 coverage with Expel as our MDR partner, and incident response from first alert to lasting fix.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>AI, agents &amp; MCP</summary>
+        <ul>
+          <li>Governing how AI agents reach company tools and data over MCP, using MintMCP for access control and audit.</li>
+          <li>Building MCP servers, Slack bots, and agent workflows with Claude Code and Devin; prototyping internal tools on Replit.</li>
+          <li>Threat modeling AI features for prompt injection, data leakage, and over-permissioned agents.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>cloud &amp; edge security</summary>
+        <ul>
+          <li>Cloud posture and runtime risk in Wiz, with GuardDuty threat detection across AWS.</li>
+          <li>Edge protection with Cloudflare: WAF, bot management, and zero trust access.</li>
           <li>Security guardrails defined in Terraform and enforced in CI, so the secure setup is also the default one.</li>
-          <li>Least-privilege identity and access for people, services, and workloads.</li>
-          <li>Hardening for containers, Kubernetes, and the cloud accounts underneath them.</li>
         </ul>
       </details>
 
       <details>
-        <summary>detection &amp; response</summary>
+        <summary>identity &amp; endpoint</summary>
         <ul>
-          <li>A security telemetry pipeline, with detections written, tested, and deployed as code.</li>
-          <li>Incident response from the first alert through containment, root cause, and lasting fixes.</li>
-          <li>Threat hunting focused on what matters most in fintech: account takeover and access to customer data.</li>
+          <li>Okta and Google Workspace as the identity foundation, with least-privilege access for people and services.</li>
+          <li>CrowdStrike on every endpoint, and Macs managed with Kandji and Jamf.</li>
         </ul>
       </details>
 
       <details>
-        <summary>AI &amp; LLM security</summary>
+        <summary>application security &amp; financial data</summary>
         <ul>
-          <li>Threat modeling AI features for prompt injection, data leakage, and over-permissioned tools and agents.</li>
-          <li>Guardrails that limit a model to the data its feature actually needs.</li>
-          <li>Using AI-assisted development (Claude Code, Cursor, Copilot) to build security tooling faster.</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>application security &amp; data protection</summary>
-        <ul>
-          <li>Security built into the development lifecycle: design reviews, code and dependency scanning, and secrets management.</li>
+          <li>Semgrep and GitHub Advanced Security on every pull request, covering code, secrets, and dependencies.</li>
+          <li>Securing the account-aggregation integrations (Plaid, MX, Finicity) that connect people's financial institutions.</li>
           <li>Protecting customer financial data through encryption, data minimization, and tight access controls.</li>
-          <li>Compliance evidence that comes out of automation rather than spreadsheets.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>vendor risk &amp; automation</summary>
+        <ul>
+          <li>Third-party risk reviews in VISO TRUST, built into purchasing through Zip, so security review happens before a contract is signed.</li>
+          <li>Slack bots and automations that connect security work to Linear and Notion, so requests and evidence don't get lost.</li>
         </ul>
       </details>
     </section>
@@ -191,7 +207,7 @@
 
       <details>
         <summary>detection as code &amp; a security data lake</summary>
-        <p>I designed and ran a high-volume telemetry pipeline in Databricks covering AWS, Azure, GCP, endpoints, and the network. Detections were versioned in Git, tested in CI, and deployed automatically.</p>
+        <p>I designed and ran a high-volume security data lake covering cloud, identity, endpoint, and network telemetry. Detections were versioned in Git, tested in CI, and deployed automatically.</p>
       </details>
 
       <details>
@@ -201,7 +217,7 @@
 
       <details>
         <summary>network &amp; critical infrastructure foundations</summary>
-        <p>I started in enterprise networking at critical-infrastructure scale, working on AAA, network access control, RADIUS/TACACS, PKI, and TLS. That foundation still shapes how I approach zero trust and incident scoping.</p>
+        <p>I started in enterprise networking at critical-infrastructure scale, working on PKI, TLS, and secure network design. That foundation still shapes how I approach zero trust and incident scoping.</p>
       </details>
     </section>
 
@@ -223,11 +239,13 @@
       <div class="table-wrap">
         <table>
           <tbody>
-            <tr><th scope="row">software</th><td>Python, Bash, PowerShell, REST APIs, Git, GitHub Actions, GitLab CI/CD</td></tr>
-            <tr><th scope="row">cloud</th><td>AWS, Azure, GCP, Terraform, Kubernetes, Docker, Ansible</td></tr>
-            <tr><th scope="row">AI</th><td>Claude Code, Cursor, GitHub Copilot, LLM threat modeling</td></tr>
-            <tr><th scope="row">detection</th><td>Databricks, Splunk, KQL, Datadog, Microsoft Defender, SOAR</td></tr>
-            <tr><th scope="row">identity &amp; network</th><td>Entra ID, zero trust, PKI / TLS, AAA, NAC</td></tr>
+            <tr><th scope="row">AI &amp; agents</th><td>Claude Code, Devin, MintMCP, MCP servers, LLM APIs, Replit</td></tr>
+            <tr><th scope="row">detection &amp; response</th><td>agentic SOC, Datadog, Sumo Logic, Expel, CrowdStrike</td></tr>
+            <tr><th scope="row">cloud &amp; edge</th><td>AWS, GCP, Azure, Cloudflare, Wiz, GuardDuty, Terraform, Kubernetes, Docker</td></tr>
+            <tr><th scope="row">identity &amp; devices</th><td>Okta, Google Workspace, Kandji, Jamf, zero trust, PKI / TLS</td></tr>
+            <tr><th scope="row">appsec &amp; vendor risk</th><td>Semgrep, GitHub Advanced Security, VISO TRUST, Zip</td></tr>
+            <tr><th scope="row">fintech</th><td>Plaid, MX, Finicity</td></tr>
+            <tr><th scope="row">software &amp; automation</th><td>Python, Bash, REST APIs, GitHub Actions, GitLab CI/CD, Slack bots, Linear, Notion</td></tr>
           </tbody>
         </table>
       </div>
