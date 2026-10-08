@@ -126,10 +126,7 @@ h1, h2 { line-height: 1.25; margin: 0; }
 
 .cover {
   height: 13rem;
-  background:
-    radial-gradient(ellipse at 20% 120%, rgba(110, 168, 254, 0.35), transparent 60%),
-    radial-gradient(ellipse at 85% -20%, rgba(80, 200, 190, 0.25), transparent 55%),
-    linear-gradient(135deg, #0b1626 0%, #13284a 55%, #0e2233 100%);
+  background: #0b1626 url("../assets/cover.svg") center / cover no-repeat;
 }
 
 .page { max-width: 46rem; margin: 0 auto; padding: 0 1.5rem 4rem; }
@@ -239,6 +236,12 @@ th, td { border: 1px solid var(--border); padding: 0.55rem 0.75rem; text-align: 
 th { width: 10rem; font-weight: 550; color: var(--text-soft); background: var(--callout); }
 
 @media (max-width: 560px) { th { width: 7rem; } }
+
+.employers { list-style: none; margin: 0; padding: 0; }
+.employers li {
+  padding: 0.55rem 0; border-bottom: 1px solid var(--border); font-weight: 500;
+}
+.employers li:first-child { border-top: 1px solid var(--border); }
 
 .contact-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
 
