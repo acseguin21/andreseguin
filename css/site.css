@@ -120,18 +120,14 @@ section p  { margin: 0 0 1rem; }
 
 .headshot {
   width: 13rem; height: 13rem; border-radius: 50%;
-  display: grid; place-items: center;
-  background-color: var(--tag-bg);
-  background-image: url("../assets/headshot.jpg");
-  background-size: cover; background-position: center;
+  object-fit: cover; background-color: var(--tag-bg);
   border: 1px solid var(--border);
-  color: var(--text-soft); font-size: 2.75rem; font-weight: 600;
 }
 
 @media (max-width: 720px) {
   .intro { padding: 3.5rem 0; }
   .intro-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .headshot { order: -1; width: 7.5rem; height: 7.5rem; font-size: 1.75rem; }
+  .headshot { order: -1; width: 7.5rem; height: 7.5rem; }
 }
 
 /* ── Buttons ────────────────────────────────────────── */
