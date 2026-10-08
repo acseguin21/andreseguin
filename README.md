@@ -1,1 +1,3 @@
-Fun Personal Website hosted at https://acseguin21.github.io/andreseguin/
+Personal website, live at https://andreseguin.me
+
+Static HTML/CSS, no build step. Hosted on GitHub Pages.
